@@ -1,0 +1,30 @@
+UILayer
+	Activities
+	...
+
+BusinessLogicLayer
+	Use Repositories
+
+RepositoryLayer
+	IRepository<T> expose basic CRUD
+	Repository<T> abstract
+	IUserRepository<T>
+	UserRepository<T>
+	...
+
+DataAccessLayer
+	IService
+	PostgresSQLService
+	MockService list from ctor
+	...
+
+Models
+	User
+	Post
+	...
+
+Common
+	UUID
+	Encryption
+	UtilClasses
+	...
