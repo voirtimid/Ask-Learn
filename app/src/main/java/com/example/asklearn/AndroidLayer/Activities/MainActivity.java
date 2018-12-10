@@ -1,9 +1,11 @@
-package com.example.asklearn;
+package com.example.asklearn.AndroidLayer.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.asklearn.R;
 
 public class MainActivity extends AppCompatActivity {
 
