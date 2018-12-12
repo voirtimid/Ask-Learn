@@ -1,7 +1,13 @@
 package com.example.asklearn.Models;
 
+import com.example.asklearn.Models.Comparators.ComparatorsPool;
+import com.example.asklearn.Models.Comparators.PostDatetimeComparator;
+
+import java.util.Comparator;
 import java.util.HashSet;
+import java.util.TreeSet;
 import java.util.Set;
+import java.util.function.Function;
 
 public class User {
     private String username;
@@ -24,15 +30,15 @@ public class User {
         this.salt = salt;
         this.passwordHash = passwordHash;
 
-        this.posts = new HashSet<>();
+        this.posts = new TreeSet<>(ComparatorsPool.getPostDatetimeComparator());
         this.likes = new HashSet<>();
         this.dislikes = new HashSet<>();
         this.isSudo = false;
         this.isAdminIn = new HashSet<>();
-        this.followings = new HashSet<>();
+        this.followings = new TreeSet<>(ComparatorsPool.getCategoryNameComparator());
         this.isVerified = false;
         this.specialName = null;
-        this.devices = new HashSet<>();
+        this.devices = new TreeSet<>(ComparatorsPool.getDeviceIsCurrentlyUsedAndNameComparator());
     }
 
     public String getUsername() {

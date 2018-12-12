@@ -1,6 +1,6 @@
 package com.example.asklearn.Models;
 
-import java.util.HashSet;
+import java.util.TreeSet;
 import java.util.Set;
 
 public class Category {
@@ -16,9 +16,9 @@ public class Category {
         this.shortName = shortName;
         this.description = description;
 
-        this.admins = new HashSet<>();
-        this.followers = new HashSet<>();
-        this.posts = new HashSet<>();
+        this.admins = new TreeSet<>();
+        this.followers = new TreeSet<>();
+        this.posts = new TreeSet<>();
     }
 
     public Category(String name, String shortName) {

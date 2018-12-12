@@ -3,6 +3,7 @@ package com.example.asklearn.Models;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Post {
     private int id;
@@ -27,7 +28,7 @@ public class Post {
 
         this.likers = new HashSet<>();
         this.dislikers = new HashSet<>();
-        this.comments = new HashSet<>();
+        this.comments = new TreeSet<>();
         this.isEdited = false;
     }
 
