@@ -1,5 +1,7 @@
 package com.example.asklearn.Models;
 
+import com.example.asklearn.Models.Comparators.ComparatorsPool;
+
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -28,7 +30,7 @@ public class Post {
 
         this.likers = new HashSet<>();
         this.dislikers = new HashSet<>();
-        this.comments = new TreeSet<>();
+        this.comments = new TreeSet<>(ComparatorsPool.getPostLikesDislikesComparator());
         this.isEdited = false;
     }
 

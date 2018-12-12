@@ -4,6 +4,7 @@ public final class ComparatorsPool {
     private static PostDatetimeComparator postDatetimeComparator;
     private static CategoryNameComparator categoryNameComparator;
     private static DeviceIsCurrentlyUsedAndNameComparator deviceIsCurrentlyUsedAndNameComparator;
+    private static PostLikesDislikesComparator postLikesDislikesComparator;
 
     private ComparatorsPool() {}
 
@@ -26,5 +27,12 @@ public final class ComparatorsPool {
             deviceIsCurrentlyUsedAndNameComparator = new DeviceIsCurrentlyUsedAndNameComparator();
         }
         return deviceIsCurrentlyUsedAndNameComparator;
+    }
+
+    public static PostLikesDislikesComparator getPostLikesDislikesComparator() {
+        if (postLikesDislikesComparator == null) {
+            postLikesDislikesComparator = new PostLikesDislikesComparator();
+        }
+        return postLikesDislikesComparator;
     }
 }

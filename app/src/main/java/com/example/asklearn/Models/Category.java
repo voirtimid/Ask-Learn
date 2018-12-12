@@ -1,5 +1,7 @@
 package com.example.asklearn.Models;
 
+import com.example.asklearn.Models.Comparators.ComparatorsPool;
+
 import java.util.TreeSet;
 import java.util.Set;
 
@@ -18,7 +20,7 @@ public class Category {
 
         this.admins = new TreeSet<>();
         this.followers = new TreeSet<>();
-        this.posts = new TreeSet<>();
+        this.posts = new TreeSet<>(ComparatorsPool.getPostLikesDislikesComparator());
     }
 
     public Category(String name, String shortName) {
